@@ -1,0 +1,33 @@
+$primaryColor: #333300;
+
+button {
+  outline:none;
+  cursor: pointer;
+}
+
+.countup {
+  width: 80px;
+
+  .number_block {
+    height: 65px;
+    line-height: 65px;
+    text-align: center;
+    color: #fff;
+  }
+
+  .simple_btn {
+    width: 100%;
+    background-color: #fff;
+    color: $primaryColor;
+    border: 1px solid $primaryColor;
+    height: 25px;
+  }
+
+  .highlight {
+    background-color: #cf649a;
+  }
+
+  .plain {
+    background-color: $primaryColor;
+  }
+}
