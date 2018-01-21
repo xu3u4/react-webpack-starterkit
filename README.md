@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/xu3u4/react-webpack-starterkit.svg?branch=master)](https://travis-ci.org/xu3u4/react-webpack-starterkit)
+
 # react-webpack-startkit
 A quick starter for react+webpack, which configs basic packages and fundamental settings with some basic usages.
 Hope this starter kit that briefly describe what the modules are, can make everything simpler and more clear for forgetful me.
