@@ -7,8 +7,5 @@ npm-debug.log
 # webpack
 dist/bundle.js
 
-# jest
-__snapshots__
-
 # Mac store
 *.DS_Store*
