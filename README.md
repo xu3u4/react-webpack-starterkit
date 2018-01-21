@@ -1,4 +1,6 @@
 [![Build Status](https://travis-ci.org/xu3u4/react-webpack-starterkit.svg?branch=master)](https://travis-ci.org/xu3u4/react-webpack-starterkit)
+[![dependencies Status](https://david-dm.org/xu3u4/react-webpack-starterkit/status.svg)](https://david-dm.org/xu3u4/react-webpack-starterkit)
+[![devDependencies Status](https://david-dm.org/xu3u4/react-webpack-starterkit/dev-status.svg)](https://david-dm.org/xu3u4/react-webpack-starterkit?type=dev)
 
 # react-webpack-startkit
 A quick starter for react+webpack, which configs basic packages and fundamental settings with some basic usages.
