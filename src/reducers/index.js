@@ -1,5 +1,5 @@
 // @flow
-import type { countUpAction } from '../actions';
+import type { countUpAction } from 'actions';
 
 export type State = {
   number: number
