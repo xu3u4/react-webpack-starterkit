@@ -1,10 +1,16 @@
+// @flow
 import React from 'react';
 import PropTypes from 'prop-types';
 
 import DisplayNum from './display_num';
 import Button from './button';
 
-const CountupBlock = ({ number, countUp }) => (
+type Props = {
+  number: number,
+  countUp: () => void
+};
+
+const CountupBlock = ({ number, countUp }: Props) => (
   <div className="countup">
     <DisplayNum
       number={number}
@@ -15,10 +21,5 @@ const CountupBlock = ({ number, countUp }) => (
     </Button>
   </div>
 );
-
-CountupBlock.propTypes = {
-  number: PropTypes.number.isRequired,
-  countUp: PropTypes.func.isRequired
-};
 
 export default CountupBlock;
