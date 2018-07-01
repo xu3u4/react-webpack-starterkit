@@ -7,6 +7,7 @@
     "production": "export NODE_ENV=production && webpack && npm start",
     "dev": "export NODE_ENV=development && webpack-dev-server --devtool eval --progress --colors --content-base dist",
     "start": "nodemon server.js",
+    "flow:status": "flow status",
     "eslint": "eslint src/js test",
     "test:watch": "jest test --watch",
     "test": "jest test"
@@ -47,6 +48,7 @@
     "babel-jest": "^22.1.0",
     "babel-loader": "^7.1.1",
     "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
     "css-loader": "^0.28.4",
@@ -60,6 +62,7 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.5.1",
+    "flow-bin": "^0.75.0",
     "html-webpack-plugin": "^2.30.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^22.1.4",

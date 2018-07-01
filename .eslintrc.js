@@ -25,6 +25,7 @@ module.exports = {
     "import/extensions": 0,
     "arrow-body-style": 0,
     "arrow-parens": 0,
+    "no-unused-vars": 0,
     "no-param-reassign": ["error", { "props": false }],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
   },
