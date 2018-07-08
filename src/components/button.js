@@ -1,7 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Button = ({ onCountUp, children }) => <button onClick={onCountUp} className="simple_btn">{children}</button>;
+const Button = ({ onCountUp, children }) => (
+  <button type="button" onClick={onCountUp} className="simple_btn">
+    {children}
+  </button>
+);
 
 Button.propTypes = {
   onCountUp: PropTypes.func.isRequired,

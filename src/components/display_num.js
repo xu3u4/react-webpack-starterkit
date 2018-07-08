@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const DisplayNum = ({ number, highlightClass }) => (
-  <div className={`number_block ${highlightClass}`}>{ number }</div>
+  <div className={`number_block ${highlightClass}`}>
+    {number}
+  </div>
 );
 
 DisplayNum.propTypes = {
