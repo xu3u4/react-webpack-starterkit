@@ -12,6 +12,7 @@ exports[`<CountupBlock> render components 1`] = `
   <button
     className="simple_btn"
     onClick={[Function]}
+    type="button"
   >
     Click
   </button>

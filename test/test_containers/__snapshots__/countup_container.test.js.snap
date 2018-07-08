@@ -41,6 +41,7 @@ ShallowWrapper {
       "storeSubscription": Subscription {
         "listeners": Object {
           "clear": [Function],
+          "get": [Function],
           "notify": [Function],
           "subscribe": [Function],
         },
@@ -80,6 +81,7 @@ ShallowWrapper {
         "storeSubscription": Subscription {
           "listeners": Object {
             "clear": [Function],
+            "get": [Function],
             "notify": [Function],
             "subscribe": [Function],
           },
