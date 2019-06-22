@@ -8,7 +8,7 @@ Hope this starter kit that briefly describe what the modules are, can make every
 ## Features
 - React
 - Redux
-- Webpack 3
+- Webpack
 - Eslint (for maintaining coding quality)
 - Jest (for testing)
 
@@ -17,7 +17,7 @@ Hope this starter kit that briefly describe what the modules are, can make every
 ```
 $ git clone https://github.com/xu3u4/react-webpack-starterkit.git
 $ cd react-webpack-starterkit
-$ npm install || $ yarn install
+$ npm install
 ```
 
 # Modules
@@ -58,7 +58,7 @@ function createThunkMiddleware(extraArgument) {
 ```
 
 [redux-devtools](https://github.com/gaearon/redux-devtools)
-DevTools for Redux with hot reloading, action replay, and customizable UI 
+DevTools for Redux with hot reloading, action replay, and customizable UI
 
 ### Babel
 [babel-core](https://github.com/babel/babel/tree/7.0/packages/babel-core)
@@ -71,17 +71,11 @@ babel-eslint allows you to lint ALL valid Babel code with the fantastic ESLint.
 This package allows transpiling JavaScript files using Babel and webpack.
 
 [babel-preset-react](https://github.com/babel/babel/tree/master/packages/babel-preset-react)
-Which includes: 
+Which includes:
 + preset-flow
 + syntax-jsx
 + transform-react-jsx
 + transform-react-display-name
-
-[babel-preset-stage-1](https://github.com/babel/babel/tree/master/packages/babel-preset-stage-1)
-Babel's stage presets equate to the TC39 Process and the different states(0: strawman, 1: formal proposal, 2: draft, 3: candidate) of each proposal for a potential language change. When a candidate becomes a formal specification, it will go to the next generation of ES.
-
-[babel-preset-es2016](https://github.com/babel/babel/tree/master/packages/babel-preset-es2016)
-Based on which Javascript version you are working on. The latest one is ES7(es2016).
 
 ### ESLint
 [ESLint](https://github.com/eslint/eslint)
@@ -150,7 +144,7 @@ Convert Enzyme wrappers to a format compatible with Jest snapshot testing.
 [jsdom](https://github.com/tmpvar/jsdom)
 It can mimic the web browser's behaviour to be useful for testing and scraping real-world web applications.
 
-jsdom is a pure-JavaScript implementation of many web standards, notably the WHATWG(The Web Hypertext Application Technology Working Group) DOM and HTML Standards, for use with Node.js. 
+jsdom is a pure-JavaScript implementation of many web standards, notably the WHATWG(The Web Hypertext Application Technology Working Group) DOM and HTML Standards, for use with Node.js.
 
 ### Server side
 [nodemon](https://github.com/remy/nodemon)
