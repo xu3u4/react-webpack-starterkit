@@ -8,7 +8,20 @@ import './styles/style.scss';
 import CountupReducer from './reducers';
 import CountupContainer from './containers/countup_container';
 
-const stores = createStore(CountupReducer, applyMiddleware(ReduxThunk));
+const middlewares = [ReduxThunk];
+
+if (process.env.NODE_ENV === 'development') {
+  // eslint-disable-next-line
+  const { logger } = require('redux-logger');
+
+  middlewares.push(logger);
+}
+
+const stores = createStore(
+  CountupReducer,
+  applyMiddleware(...middlewares)
+);
+
 ReactDOM.render(
   <Provider store={stores}>
     <CountupContainer />
