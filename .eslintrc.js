@@ -21,7 +21,6 @@ module.exports = {
     "new-cap": 0,
     "import/no-unresolved": 0,
     "no-underscore-dangle": 0,
-    "comma-dangle":0,
     "import/extensions": 0,
     "arrow-body-style": 0,
     "arrow-parens": 0,

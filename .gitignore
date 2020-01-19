@@ -5,7 +5,7 @@ node_modules
 npm-debug.log
 
 # webpack
-dist/bundle.js
+dist
 
 # Mac store
 *.DS_Store*

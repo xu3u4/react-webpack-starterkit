@@ -1,24 +1,22 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 
 import DisplayNum from './display_num';
 import Button from './button';
 
-const CountupBlock = ({ number, countUp }) => (
-  <div className="countup">
-    <DisplayNum
-      number={number}
-      highlightClass={number % 5 ? 'plain' : 'highlight'}
-    />
-    <Button onCountUp={() => countUp()}>
-      Click
-    </Button>
-  </div>
-);
+const CountupBlock = () => {
+  const [count, setCount] = useState(0);
 
-CountupBlock.propTypes = {
-  number: PropTypes.number.isRequired,
-  countUp: PropTypes.func.isRequired
+  return (
+    <div className="countup">
+      <DisplayNum
+        number={count}
+        highlightClass={count % 5 ? 'plain' : 'highlight'}
+      />
+      <Button onClick={() => setCount(count + 1)}>
+        Click
+      </Button>
+    </div>
+  );
 };
 
 export default CountupBlock;
