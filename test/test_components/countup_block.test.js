@@ -1,20 +1,15 @@
 import React from 'react';
-import sinon from 'sinon';
-import renderer from 'react-test-renderer';
+import { render, cleanup, fireEvent } from '@testing-library/react'
 
 import CountupBlock from 'components/countup_block';
 
-describe ('<CountupBlock>', () => {
-  let countupBlock;
-  const onclick = sinon.stub(),
-        number = 3;
-  it ('render components', () => {
-    countupBlock = renderer.create(
-      <CountupBlock
-        number={number}
-        countUp={onclick}
-      />
-    );
-    expect(countupBlock).toMatchSnapshot();
+describe('<CountupBlock>', () => {
+  afterEach(cleanup);
+
+  it ('click to change number', () => {
+    const { container, getByText, getByTestId } = render(<CountupBlock />)
+    expect(getByTestId('number_block').textContent).toEqual("0");
+    fireEvent.click(getByText('Click'))
+    expect(getByTestId('number_block').textContent).toEqual("1");
   });
 });
