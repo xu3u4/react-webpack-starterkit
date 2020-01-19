@@ -1,41 +1,17 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import renderer from 'react-test-renderer';
+import { render, cleanup, fireEvent } from '@testing-library/react'
 
 import DisplayNum from 'components/display_num';
 
 describe ('<DisplayNum>', () => {
-  let numberTag, number;
-  
   it ('render components', () => {
-    numberTag = renderer.create(
-      <DisplayNum 
-        number={number}
-        highlightClass={number % 5 ? 'plain' : 'highlight'}
+    const content = 3
+    const { getByTestId } = render(
+      <DisplayNum
+        number={content}
+        highlightClass="highlight"
       />
     );
-    expect(numberTag).toMatchSnapshot();
-  });
-
-  describe ('with different number', () => {
-    beforeEach(() => {
-      numberTag = shallow(
-        <DisplayNum number={number} highlightClass={number % 5 ? 'plain' : 'highlight'}/>
-      );
-    });
-
-    describe ('when number % 5 !== 0', () => {
-      number = 1;
-      it ('change class to plain', () => {
-        expect(numberTag.find('div').hasClass('plain')).toBetruthy;
-      });
-    });
-
-    describe ('when number % 5 === 0', () => {
-      number = 10;
-      it ('change class to highlight', () => {
-        expect(numberTag.find('div').hasClass('highlight')).toBetruthy;
-      });
-    });
+    expect(getByTestId('number_block').textContent).toEqual("3");
   });
 });

@@ -1,27 +1,27 @@
 import React from 'react';
-import { mount, shallow } from 'enzyme';
-import renderer from 'react-test-renderer';
-import sinon from 'sinon';
+import { render, cleanup, fireEvent } from '@testing-library/react'
 
 import Button from 'components/button';
 
 describe ('<Button>', () => {
-  const onclick = sinon.stub();
-  const value = 'Click';
-  let button;
-  
-  it ('render components', () => {
-    button = renderer.create(
-      <Button onCountUp={ onclick } >{ value }</Button>
+  const onclick = jest.fn();
+
+  it ('should render button properly', () => {
+    const value = 'Click';
+    const { getByText } = render(
+      <Button onClick={ onclick } >{ value }</Button>
     );
-    expect(button).toMatchSnapshot();
+
+    expect(getByText(value)).toBeDefined()
   });
 
-  it ('should call onClick when click', () => {
-    button = shallow(
-      <Button onCountUp={ onclick } >{ value }</Button>
+  it ('should render onClick when click', () => {
+    const value = 'Click';
+    const { getByText } = render(
+      <Button onClick={ onclick } >{ value }</Button>
     );
-    button.find('button').simulate('click');
-    expect(onclick.calledOnce).toBeTruthy();
+
+    fireEvent.click(getByText('Click'))
+    expect(onclick).toHaveBeenCalledTimes(1)
   });
 });
