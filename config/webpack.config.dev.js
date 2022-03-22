@@ -11,22 +11,16 @@ module.exports = {
   mode: environment,
   devtool: 'inline-source-map',
   devServer: {
-    hot: true,
+    hot: "only",
     host: 'localhost',
     port: 3000,
-    contentBase: path.join(__dirname, "../dist")
+    static: {
+      directory: path.join(__dirname, "../dist"),
+    }
   },
   optimization: {
     usedExports: true,
-    splitChunks: {
-      cacheGroups: {
-        common: {
-          test: /[\\/]node_modules[\\/]/,
-          priority: -10,
-          chunks: 'initial'
-        },
-      }
-    }
+    splitChunks: { chunks: 'all' }
   },
   plugins: [
     new CleanWebpackPlugin(),
